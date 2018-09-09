@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class task2 {
+public class task2 { //задача номер 2
 
     public static  int toSec(int a, int b, int c)
     {
@@ -10,27 +10,16 @@ public class task2 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        int h1 = in.nextInt();
-        int m1 = in.nextInt();
-        int s1 = in.nextInt();
+        int n = in.nextInt();
+        int r = 0;
 
-        int h2 = in.nextInt();
-        int m2 = in.nextInt();
-        int s2 = in.nextInt();
+        if (n == 0) {
+            r = 1;
+        } else while (n!= 0) {
+            n = n/10;
+            r++;
+        }
 
-        int S1 = toSec(h1, m1, s1);
-        int S2 = toSec(h2, m2, s2);
-
-        int total = S2 - S1;
-
-        int h = total - total%3600;
-        total -= h;
-
-        int m = total - total%60;
-        total -= m;
-
-        int s = total;
-
-        System.out.println(h/3600 + " " + m/60 + " " + s);
+        System.out.println(r);
     }
 }
