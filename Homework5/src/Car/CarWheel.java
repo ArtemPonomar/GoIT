@@ -17,6 +17,7 @@ public class CarWheel {
 
     public void wereOutTire(double percents){
         durability /= 100*(100 - percents);
+        if(durability < 0) durability = 0;
     }
 
     public double getDurability(){
