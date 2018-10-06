@@ -52,10 +52,5 @@ public class Main {
         player6.playAllSongs();
         player6.shuffle();
         player6.playAllSongs();
-
-
-
-
-
     }
 }
